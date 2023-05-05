@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Config-personal-websites on 墨客人生</title><link>http://example.org/config-personal-website/</link><description>Recent content in Config-personal-websites on 墨客人生</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 04 May 2023 13:31:11 +0800</lastBuildDate><atom:link href="http://example.org/config-personal-website/index.xml" rel="self" type="application/rss+xml"/><item><title>如何构建自己的个人博客</title><link>http://example.org/config-personal-website/how-to-create-your-personal-website/</link><pubDate>Thu, 04 May 2023 13:31:11 +0800</pubDate><guid>http://example.org/config-personal-website/how-to-create-your-personal-website/</guid><description>构建属于自己的个人博客系统，往往涉及多方面的问题。例如：
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Config-personal-websites on 墨客人生</title>
+    <link>http://example.org/config-personal-website/</link>
+    <description>Recent content in Config-personal-websites on 墨客人生</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 04 May 2023 13:31:11 +0800</lastBuildDate><atom:link href="http://example.org/config-personal-website/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何构建自己的个人博客</title>
+      <link>http://example.org/config-personal-website/how-to-create-your-personal-website/</link>
+      <pubDate>Thu, 04 May 2023 13:31:11 +0800</pubDate>
+      
+      <guid>http://example.org/config-personal-website/how-to-create-your-personal-website/</guid>
+      <description>构建属于自己的个人博客系统，往往涉及多方面的问题。例如：
 使用哪个 framework 构建自己的博客系统 使用哪个内容托管平台托管自己的静态网友 域名绑定 1 使用 Hugo 构建个人博客 Link to heading 1.1 安装与配置 Hugo Link to heading 1.1.1 安装 Hugo Link to heading 如果是 Mac os 可以使用包管理器进行安装 Hugo。
 brew install hugo 执行的结果：
-==&amp;gt; Fetching hugo ==&amp;gt; Downloading https://ghcr.io/v2/homebrew/core/hugo/manifests/0.111.3 ################################################################ 100.0% ==&amp;gt; Downloading https://ghcr.io/v2/homebrew/core/hugo/blobs/sha256:0808 ==&amp;gt; Downloading from https://pkg-containers.githubusercontent.com/ghcr1 ################################################################ 100.0% ==&amp;gt; Pouring hugo--0.111.3.arm64_monterey.bottle.tar.gz ==&amp;gt; Caveats zsh completions have been installed to: /opt/homebrew/share/zsh/site-functions ==&amp;gt; Summary 🍺 /opt/homebrew/Cellar/hugo/0.111.3: 48 files, 56.4MB ==&amp;gt; Running `brew cleanup hugo`.</description></item></channel></rss>
+==&amp;gt; Fetching hugo ==&amp;gt; Downloading https://ghcr.io/v2/homebrew/core/hugo/manifests/0.111.3 ################################################################ 100.0% ==&amp;gt; Downloading https://ghcr.io/v2/homebrew/core/hugo/blobs/sha256:0808 ==&amp;gt; Downloading from https://pkg-containers.githubusercontent.com/ghcr1 ################################################################ 100.0% ==&amp;gt; Pouring hugo--0.111.3.arm64_monterey.bottle.tar.gz ==&amp;gt; Caveats zsh completions have been installed to: /opt/homebrew/share/zsh/site-functions ==&amp;gt; Summary 🍺 /opt/homebrew/Cellar/hugo/0.111.3: 48 files, 56.4MB ==&amp;gt; Running `brew cleanup hugo`.</description>
+    </item>
+    
+  </channel>
+</rss>
