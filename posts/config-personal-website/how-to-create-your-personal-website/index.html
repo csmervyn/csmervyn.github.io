@@ -77,8 +77,8 @@ brew install hugo 执行的结果：
 </span></span></code></pre></div><p>运行服务后，我们可以通过浏览器 http://localhost:1313 地址访问我们的本地预览网页。</p><h3 id=122-发布博文>1.2.2 发布博文
 <a class=heading-link href=#122-%e5%8f%91%e5%b8%83%e5%8d%9a%e6%96%87><i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>在发布博文之前，需要删除文首的 draft: true。</p><pre tabindex=0><code>hugo
-</code></pre><p>当你发布站点时，Hugo 会在项目根目录的 <code>public</code> 目录中创建整个静态站点。这包括 HTML 文件和资产，例如图像、CSS 文件和 JavaScript 文件。</p><h1 id=将博客内容放置于-github-pages>将博客内容放置于 Github pages
-<a class=heading-link href=#%e5%b0%86%e5%8d%9a%e5%ae%a2%e5%86%85%e5%ae%b9%e6%94%be%e7%bd%ae%e4%ba%8e-github-pages><i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+</code></pre><p>当你发布站点时，Hugo 会在项目根目录的 <code>public</code> 目录中创建整个静态站点。这包括 HTML 文件和资产，例如图像、CSS 文件和 JavaScript 文件。</p><h1 id=2-将博客内容放置于-github-pages>2 将博客内容放置于 Github pages
+<a class=heading-link href=#2-%e5%b0%86%e5%8d%9a%e5%ae%a2%e5%86%85%e5%ae%b9%e6%94%be%e7%bd%ae%e4%ba%8e-github-pages><i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h1><p>使用 GitHub action 将博客源码仓库的 <code>public</code> 目录中静态站点推送至个人的 Github pages。
 <img src=/config-personal-website/deploy-site-to-github-pages.png alt=空的博客></p><div class=highlight><pre tabindex=0 style=color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Sample workflow for building and deploying a Hugo site to GitHub Pages</span><span style=color:#6e7681>
 </span></span></span><span style=display:flex><span><span style=color:#6e7681></span><span style=color:#7ee787>name</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>Deploy Hugo site to Pages</span><span style=color:#6e7681>
@@ -114,8 +114,8 @@ brew install hugo 执行的结果：
 </span></span></span><span style=display:flex><span><span style=color:#6e7681>          </span><span style=color:#7ee787>personal_token</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>${{ secrets.ACTION_ACCESS_TOKEN }}	# 发布到其他repo需要提供上面生成的personal access token</span><span style=color:#6e7681>
 </span></span></span><span style=display:flex><span><span style=color:#6e7681>          </span><span style=color:#7ee787>publish_dir</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>./public	# 注意这里指的是要发布哪个文件夹的内容，而不是指发布到目的仓库的什么位置，因为hugo默认生成静态网页到public文件夹，所以这里发布public文件夹里的内容</span><span style=color:#6e7681>
 </span></span></span><span style=display:flex><span><span style=color:#6e7681>          </span><span style=color:#7ee787>publish_branch</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>master	# 发布到哪个branch</span><span style=color:#6e7681>
-</span></span></span></code></pre></div><p>上门的 github action 将博客源码中的 public 文件夹中的内容，推送到 <code>csmervyn/csmervyn.github.io</code> 的 master 分支。</p><h1 id=安装评论插件>安装评论插件
-<a class=heading-link href=#%e5%ae%89%e8%a3%85%e8%af%84%e8%ae%ba%e6%8f%92%e4%bb%b6><i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+</span></span></span></code></pre></div><p>上门的 github action 将博客源码中的 public 文件夹中的内容，推送到 <code>csmervyn/csmervyn.github.io</code> 的 master 分支。</p><h1 id=3-安装评论插件>3 安装评论插件
+<a class=heading-link href=#3-%e5%ae%89%e8%a3%85%e8%af%84%e8%ae%ba%e6%8f%92%e4%bb%b6><i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h1><p><a href=https://github.com/apps/giscus class=external-link target=_blank rel=noopener>Github giscus app</a></p><ul><li>giscus 主页
 <img src=/config-personal-website/github-giscus-app-homepage.png alt="github giscus app"></li><li>选择安装 giscus 的 github account
 <img src=/config-personal-website/select-github-account-for-giscus.png alt=select-github-account-for-giscus></li><li>安装 giscus
