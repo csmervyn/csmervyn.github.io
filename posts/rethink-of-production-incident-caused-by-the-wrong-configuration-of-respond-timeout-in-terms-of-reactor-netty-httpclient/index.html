@@ -11,7 +11,7 @@
 <time datetime=2024-01-17T05:07:38+08:00>January 17, 2024
 </time></span><span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
 阅读时间：2 分钟
-</span><span class=post-word-count>| 🍉 249 字</span></div><div class=authors><i class="fa fa-user" aria-hidden=true></i>
+</span><span class=post-word-count>| 🍉 253 字</span></div><div class=authors><i class="fa fa-user" aria-hidden=true></i>
 <a href=/authors/mervyn/>mervyn</a></div></div></header><div class=post-content><p>在 onCall 的过程中，发生了一起由 Reactor Netty HttpClient 的 response-timeout 设置错误引发的 P2 级生产事故。造成了系统 1.5 小时部分功能不可用，使客户遭受了经济上的损失。本文期望针对完整的事件进行复盘与反思，以加强自己对线上环境的敬畏。</p><h2 id=问题表现>问题表现
 <a class=heading-link href=#%e9%97%ae%e9%a2%98%e8%a1%a8%e7%8e%b0><i class="fa fa-link" aria-hidden=true title=链接到标题></i>
 <span class=sr-only>链接到标题</span></a></h2><p>在 onCall 时，通过监控平台发现 Api-gateway 的 response time 和 failed request 数量持续不断攀升。从发现问题到解决，Response time 超过 500ms 持续 1小时40分钟，峰值为 3.14s；Failed request 峰值达到 4.14 k。
@@ -41,9 +41,8 @@
 图 1-1 Reactor Netty HttpClient 的 response-timeout 含义</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>response-timeout = 请求传网络传输时间 + 请求处理时间 + 响应网络传输时间
 </span></span></code></pre></div><blockquote></blockquote><p><a href=https://projectreactor.io/docs/netty/snapshot/reference/index.html#response-timeout class=external-link target=_blank rel=noopener>根据官方文档，Response-timeout 没有指定默认值。</a></p><p>结论：<strong>在设置了 Reactor Netty HttpClient 的 response-timeout 的情况下，如果服务消费方发现服务提供方超过了设定的 response-timeout，就会不等待服务提供方的响应，认为没有收到响应（响应失败）。</strong></p><h3 id=验证猜测>验证猜测
 <a class=heading-link href=#%e9%aa%8c%e8%af%81%e7%8c%9c%e6%b5%8b><i class="fa fa-link" aria-hidden=true title=链接到标题></i>
-<span class=sr-only>链接到标题</span></a></h3><p><img src=/rethink-of-production-incident-caused-by-the-wrong-configuration-of-respond-timeout-in-terms-of-Reactor-Netty-HttpClient/test-response-timeout.svg alt="测试 HttpClient 的 response timeout">
-图1-2 测试
-我们通过两个 HttpClient 的 response timeout 的测试，验证了我们的结论。</p><h2 id=产生的影响>产生的影响
+<span class=sr-only>链接到标题</span></a></h3><p><img src=/rethink-of-production-incident-caused-by-the-wrong-configuration-of-respond-timeout-in-terms-of-Reactor-Netty-HttpClient/test-response-timeout.svg alt="测试 HttpClient 的 response-timeout"></p><p>图1-2 测试HttpClient 的 response-timeout</p><p>我们通过两个 HttpClient 的 response timeout 的测试，验证了我们的结论。
+<a href=https://github.com/csmervyn/httpclient-test class=external-link target=_blank rel=noopener>实验的demo 源码</a></p><h2 id=产生的影响>产生的影响
 <a class=heading-link href=#%e4%ba%a7%e7%94%9f%e7%9a%84%e5%bd%b1%e5%93%8d><i class="fa fa-link" aria-hidden=true title=链接到标题></i>
 <span class=sr-only>链接到标题</span></a></h2><ul><li>客户侧：P2 incident 影响了业务的正常开展，产生了潜在的经济损失。</li><li>团队侧：影响团队的声誉和自信心，损害了团队与客户的关系。</li></ul><h2 id=action>Action
 <a class=heading-link href=#action><i class="fa fa-link" aria-hidden=true title=链接到标题></i>
