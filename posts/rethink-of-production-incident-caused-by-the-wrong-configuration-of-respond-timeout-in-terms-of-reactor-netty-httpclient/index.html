@@ -12,7 +12,7 @@
 </time></span><span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
 阅读时间：2 分钟
 </span><span class=post-word-count>| 🍉 253 字</span></div><div class=authors><i class="fa fa-user" aria-hidden=true></i>
-<a href=/authors/mervyn/>mervyn</a></div></div></header><div class=post-content><p>在 onCall 的过程中，发生了一起由 Reactor Netty HttpClient 的 response-timeout 设置错误引发的 P2 级生产事故。造成了系统 1.5 小时部分功能不可用，使客户遭受了经济上的损失。本文期望针对完整的事件进行复盘与反思，以加强自己对线上环境的敬畏。</p><h2 id=问题表现>问题表现
+<a href=/authors/mervyn/>Mervyn</a></div></div></header><div class=post-content><p>在 onCall 的过程中，发生了一起由 Reactor Netty HttpClient 的 response-timeout 设置错误引发的 P2 级生产事故。造成了系统 1.5 小时部分功能不可用，使客户遭受了经济上的损失。本文期望针对完整的事件进行复盘与反思，以加强自己对线上环境的敬畏。</p><h2 id=问题表现>问题表现
 <a class=heading-link href=#%e9%97%ae%e9%a2%98%e8%a1%a8%e7%8e%b0><i class="fa fa-link" aria-hidden=true title=链接到标题></i>
 <span class=sr-only>链接到标题</span></a></h2><p>在 onCall 时，通过监控平台发现 Api-gateway 的 response time 和 failed request 数量持续不断攀升。从发现问题到解决，Response time 超过 500ms 持续 1小时40分钟，峰值为 3.14s；Failed request 峰值达到 4.14 k。
 从用户侧来看系统部分功能卡顿或不可用，使用户在1.5小时内无法正常开展业务。</p><h2 id=采取的紧急措施>采取的紧急措施
