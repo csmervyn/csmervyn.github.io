@@ -1,6 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on 墨客人生</title><link>http://example.org/categories/java/</link><description>Recent content in Java on 墨客人生</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 31 Mar 2024 11:38:29 +0800</lastBuildDate><atom:link href="http://example.org/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Mac M1 上安装 Memory Analyzer</title><link>http://example.org/posts/install-memory-analyzer-on-mac-m1/</link><pubDate>Sun, 31 Mar 2024 11:38:29 +0800</pubDate><guid>http://example.org/posts/install-memory-analyzer-on-mac-m1/</guid><description>下载 Memory Analyzer 链接到标题 如图1-1所示，通过Memory Analyzer 下载地址下载 ARM 架构的 Memory Analyzer。直接安装下载好的dmg文件即可。
-图1-1 下载 ARM 架构的 Memory Analyzer
-troubleshooting 链接到标题 问题1: The JVM shared library &amp;hellip; does not contain the JNI_CreateJavaVM symbol. 链接到标题 错误信息图1-2所示。 details:
-The JVM shared library &amp;#34;/Library/Java/JavaVirtualMachines/temurin-20.jdk/Contents/Home/bin/../lib/server/libjvm.dylib&amp;#34; does not contain the JNI_CreateJavaVM symbol. 图1-2 The JVM shared library does not contain the JNI_CreateJavaVM symbol
-解决方案 链接到标题 如图1-3 展示，Memory Analyzer 的 info.plist 文件和 MemoryAnalyzer.ini 文件的位置。
-图1-3 info.plist 文件和 MemoryAnalyzer.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on 墨客人生</title><link>http://example.org/categories/java/</link><description>Recent content in Java on 墨客人生</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 31 Mar 2024 11:38:29 +0800</lastBuildDate><atom:link href="http://example.org/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Mac M1 上安装 Memory Analyzer</title><link>http://example.org/posts/install-memory-analyzer-on-mac-m1/</link><pubDate>Sun, 31 Mar 2024 11:38:29 +0800</pubDate><guid>http://example.org/posts/install-memory-analyzer-on-mac-m1/</guid><description>&lt;h1 id="下载-memory-analyzer">
+ 下载 Memory Analyzer
+ &lt;a class="heading-link" href="#%e4%b8%8b%e8%bd%bd-memory-analyzer">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
+ &lt;span class="sr-only">链接到标题&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;p>如图1-1所示，通过&lt;a href="https://eclipse.dev/mat/downloads.php" class="external-link" target="_blank" rel="noopener">Memory Analyzer 下载地址&lt;/a>下载 ARM 架构的 Memory Analyzer。直接安装下载好的dmg文件即可。&lt;/p>
+&lt;p>&lt;img src="http://example.org/install-Memory-Analyzer-on-Mac-M1/download-memory-analyzer.png" alt="下载 ARM 架构的 Memory Analyzer">&lt;/p>
+&lt;p>图1-1 下载 ARM 架构的 Memory Analyzer&lt;/p>
+&lt;h2 id="troubleshooting">
+ troubleshooting
+ &lt;a class="heading-link" href="#troubleshooting">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
+ &lt;span class="sr-only">链接到标题&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h3 id="问题1-the-jvm-shared-library--does-not-contain-the-jni_createjavavm-symbol">
+ 问题1: The JVM shared library &amp;hellip; does not contain the JNI_CreateJavaVM symbol.
+ &lt;a class="heading-link" href="#%e9%97%ae%e9%a2%981-the-jvm-shared-library--does-not-contain-the-jni_createjavavm-symbol">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
+ &lt;span class="sr-only">链接到标题&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;p>错误信息图1-2所示。
+details:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>The JVM shared library &amp;#34;/Library/Java/JavaVirtualMachines/temurin-20.jdk/Contents/Home/bin/../lib/server/libjvm.dylib&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>does not contain the JNI_CreateJavaVM symbol.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="http://example.org/install-Memory-Analyzer-on-Mac-M1/does-not-contain-jni-createJavaVM-symbol.png" alt="The JVM shared library does not contain the JNI_CreateJavaVM symbol">&lt;/p></description></item></channel></rss>
