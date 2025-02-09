@@ -7,24 +7,4 @@
 &lt;/h1>
 &lt;p>如图1-1所示，通过&lt;a href="https://eclipse.dev/mat/downloads.php" class="external-link" target="_blank" rel="noopener">Memory Analyzer 下载地址&lt;/a>下载 ARM 架构的 Memory Analyzer。直接安装下载好的dmg文件即可。&lt;/p>
 &lt;p>&lt;img src="http://example.org/install-Memory-Analyzer-on-Mac-M1/download-memory-analyzer.png" alt="下载 ARM 架构的 Memory Analyzer">&lt;/p>
-&lt;p>图1-1 下载 ARM 架构的 Memory Analyzer&lt;/p>
-&lt;h2 id="troubleshooting">
- troubleshooting
- &lt;a class="heading-link" href="#troubleshooting">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
- &lt;span class="sr-only">链接到标题&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;h3 id="问题1-the-jvm-shared-library--does-not-contain-the-jni_createjavavm-symbol">
- 问题1: The JVM shared library &amp;hellip; does not contain the JNI_CreateJavaVM symbol.
- &lt;a class="heading-link" href="#%e9%97%ae%e9%a2%981-the-jvm-shared-library--does-not-contain-the-jni_createjavavm-symbol">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
- &lt;span class="sr-only">链接到标题&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;p>错误信息图1-2所示。
-details:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>The JVM shared library &amp;#34;/Library/Java/JavaVirtualMachines/temurin-20.jdk/Contents/Home/bin/../lib/server/libjvm.dylib&amp;#34;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>does not contain the JNI_CreateJavaVM symbol.
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="http://example.org/install-Memory-Analyzer-on-Mac-M1/does-not-contain-jni-createJavaVM-symbol.png" alt="The JVM shared library does not contain the JNI_CreateJavaVM symbol">&lt;/p></description></item></channel></rss>
+&lt;p>图1-1 下载 ARM 架构的 Memory Analyzer&lt;/p></description></item></channel></rss>

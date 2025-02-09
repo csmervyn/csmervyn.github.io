@@ -6,24 +6,4 @@
  &lt;/a>
 &lt;/h2>
 &lt;p>近日发现有一个微服务在运行时出现了 &lt;code>java.lang.OutOfMemoryError: Metaspace&lt;/code> 的错误。这个错误是由于 &lt;code>Metaspace&lt;/code> 区域内存不足导致的。&lt;code>Metaspace&lt;/code> 是 Java 8 之后取代了永久代的区域，用于存放类的元数据信息。Metaspace 是在本地内存中分配的，不受 Java 堆大小的限制，但是受本地内存大小的限制。
-当 &lt;code>Metaspace&lt;/code> 区域内存不足时，会抛出 &lt;code>java.lang.OutOfMemoryError: Metaspace&lt;/code> 错误。Metaspace 在 Java 虚拟机内存中的位置如图1所示：&lt;/p>
-&lt;p>&lt;img src="http://example.org/fix-OutOfMemoryError-of-Metaspace/Java-virtual-machine-memory-structure.png" alt="Java-virtual-machine-memory-structure">&lt;/p>
-&lt;p>图1 Java 虚拟机内存结构（图片来自网络）&lt;/p>
-&lt;p>同时，出现 &lt;code>java.lang.OutOfMemoryError: Metaspace&lt;/code> 错误时，Metaspace 区域的监控指标如图2所示。在图2中，可以看到 Metaspace 的 used 和 max 之间的差距很小，说明 Metaspace 区域内存不足。
-&lt;img src="http://example.org/fix-OutOfMemoryError-of-Metaspace/Metespace_metrics_in_grafana.png" alt="Metesapce metrics in grafana">&lt;/p>
-&lt;p>图2 在 grafana 中的 Metaspace 监控指标&lt;/p>
-&lt;h2 id="解决方案">
- 解决方案
- &lt;a class="heading-link" href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
- &lt;span class="sr-only">链接到标题&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;h3 id="临时解决方案">
- 临时解决方案
- &lt;a class="heading-link" href="#%e4%b8%b4%e6%97%b6%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
- &lt;span class="sr-only">链接到标题&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;p>在出现 &lt;code>java.lang.OutOfMemoryError: Metaspace&lt;/code> 错误时，可以通过增加 Metaspace 区域的内存大小来解决。在启动 Java 应用时，可以通过 &lt;code>-XX:MaxMetaspaceSize&lt;/code> 参数来设置 Metaspace 区域的最大内存大小。例如，设置 Metaspace 区域的最大内存大小为 512M，可以通过如下命令来启动 Java 应用：&lt;/p></description></item></channel></rss>
+当 &lt;code>Metaspace&lt;/code> 区域内存不足时，会抛出 &lt;code>java.lang.OutOfMemoryError: Metaspace&lt;/code> 错误。Metaspace 在 Java 虚拟机内存中的位置如图1所示：&lt;/p></description></item></channel></rss>
