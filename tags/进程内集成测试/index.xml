@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>进程内集成测试 on 墨客人生</title><link>http://example.org/tags/%E8%BF%9B%E7%A8%8B%E5%86%85%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95/</link><description>Recent content in 进程内集成测试 on 墨客人生</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 09 Feb 2025 21:48:32 +0700</lastBuildDate><atom:link href="http://example.org/tags/%E8%BF%9B%E7%A8%8B%E5%86%85%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml"/><item><title>软件研发人员的质量保证实践【部分】</title><link>http://example.org/posts/servlet-book/quality-assurance-practices-for-software-developers/</link><pubDate>Sun, 09 Feb 2025 21:48:32 +0700</pubDate><guid>http://example.org/posts/servlet-book/quality-assurance-practices-for-software-developers/</guid><description>&lt;h3 id="1191-进程内集成测试">
+ 11.9.1 进程内集成测试
+ &lt;a class="heading-link" href="#1191-%e8%bf%9b%e7%a8%8b%e5%86%85%e9%9b%86%e6%88%90%e6%b5%8b%e8%af%95">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
+ &lt;span class="sr-only">链接到标题&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;p>进程内集成测试是一种针对应用程序内部组件和模块之间的集成进行测试的方法。它主要关注应用程序内部各个组件之间的协同工作、通信和数据流，以验证它们在应用程序运行时是否能够正确地交互和合作。&lt;/p></description></item></channel></rss>
