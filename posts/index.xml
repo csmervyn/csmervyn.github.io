@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 墨客人生</title><link>http://example.org/posts/</link><description>Recent content in Posts on 墨客人生</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 09 Feb 2025 21:48:32 +0700</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>软件研发人员的质量保证实践【部分】</title><link>http://example.org/posts/servlet-book/quality-assurance-practices-for-software-developers/</link><pubDate>Sun, 09 Feb 2025 21:48:32 +0700</pubDate><guid>http://example.org/posts/servlet-book/quality-assurance-practices-for-software-developers/</guid><description>&lt;h3 id="1191-进程内集成测试">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 墨客人生</title><link>http://example.org/posts/</link><description>Recent content in Posts on 墨客人生</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 15 Feb 2025 10:10:42 +0700</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Spring Boot 中如何使用 OAuth 2.0 Client</title><link>http://example.org/posts/spring-boot/how-to-use-oauth-2-client-in-spring-boot/</link><pubDate>Sat, 15 Feb 2025 10:10:42 +0700</pubDate><guid>http://example.org/posts/spring-boot/how-to-use-oauth-2-client-in-spring-boot/</guid><description>&lt;h1 id="背景">
+ 背景
+ &lt;a class="heading-link" href="#%e8%83%8c%e6%99%af">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
+ &lt;span class="sr-only">链接到标题&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;p>目前有两个微服务 A 和 B，微服务 A 访问微服务 B 之前需要从授权服务器中获取 Access Token，才能携带 Access Token 访问微服务 B 中的 Restful API，如图 1 所示。微服务 A 使用客户端模式（Client Credentials Grant）的方式，从授权服务器获取 Access Token。目前微服务 A 通过 RestTemplate，从授权服务器获取 Access Token，并通过 Ehcache 来缓存 Access Token。&lt;/p></description></item><item><title>软件研发人员的质量保证实践【部分】</title><link>http://example.org/posts/servlet-book/quality-assurance-practices-for-software-developers/</link><pubDate>Sun, 09 Feb 2025 21:48:32 +0700</pubDate><guid>http://example.org/posts/servlet-book/quality-assurance-practices-for-software-developers/</guid><description>&lt;h3 id="1191-进程内集成测试">
  11.9.1 进程内集成测试
  &lt;a class="heading-link" href="#1191-%e8%bf%9b%e7%a8%8b%e5%86%85%e9%9b%86%e6%88%90%e6%b5%8b%e8%af%95">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
