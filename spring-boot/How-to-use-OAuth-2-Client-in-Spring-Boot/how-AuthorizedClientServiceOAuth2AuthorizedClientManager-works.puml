@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+YourComponent -> AuthorizedClientServiceOAuth2AuthorizedClientManager: authorize(OAuth2AuthorizeRequest authorizeRequest)
+AuthorizedClientServiceOAuth2AuthorizedClientManager -> InMemoryOAuth2AuthorizedClientService: loadAuthorizedClient(String clientRegistrationId, String principalName)
+InMemoryOAuth2AuthorizedClientService --> AuthorizedClientServiceOAuth2AuthorizedClientManager:
+AuthorizedClientServiceOAuth2AuthorizedClientManager -> ClientCredentialsOAuth2AuthorizedClientProvider: authorize(OAuth2AuthorizationContext context)
+ClientCredentialsOAuth2AuthorizedClientProvider --> AuthorizedClientServiceOAuth2AuthorizedClientManager:
+AuthorizedClientServiceOAuth2AuthorizedClientManager --> YourComponent:
+@enduml
