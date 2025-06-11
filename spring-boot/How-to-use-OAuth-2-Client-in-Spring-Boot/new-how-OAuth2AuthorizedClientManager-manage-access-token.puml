@@ -1,0 +1,18 @@
+@startuml
+YourComponent --> "DefaultOAuth2AuthorizedClientManager(OAuth2AuthorizedClientManager)": authorize(OAuth2AuthorizeRequest authorizeRequest)
+"DefaultOAuth2AuthorizedClientManager(OAuth2AuthorizedClientManager)" --> "HttpSessionOAuth2AuthorizedClientRepository(OAuth2AuthorizedClientRepository)": loadAuthorizedClient(String clientRegistrationId, Authentication principal, HttpServletRequest request)
+note over "HttpSessionOAuth2AuthorizedClientRepository(OAuth2AuthorizedClientRepository)": retrieve Access Token from cache(HttpSession)
+"HttpSessionOAuth2AuthorizedClientRepository(OAuth2AuthorizedClientRepository)" --> "DefaultOAuth2AuthorizedClientManager(OAuth2AuthorizedClientManager)": <T extends OAuth2AuthorizedClient> T
+"DefaultOAuth2AuthorizedClientManager(OAuth2AuthorizedClientManager)" --> "ClientCredentialsOAuth2AuthorizedClientProvider(OAuth2AuthorizedClientProvider)": authorize(OAuth2AuthorizationContext context)
+note over "ClientCredentialsOAuth2AuthorizedClientProvider(OAuth2AuthorizedClientProvider)"
+if the Access Token from cache is not expired, return OAuth2AuthorizedClient with old Access Token
+if the Access Token from cache is expired, retrieve new one from Authoriaztion Server, return OAuth2AuthorizedClient with new Access Token
+end note
+"ClientCredentialsOAuth2AuthorizedClientProvider(OAuth2AuthorizedClientProvider)" --> "DefaultOAuth2AuthorizedClientManager(OAuth2AuthorizedClientManager)": OAuth2AuthorizedClient
+"DefaultOAuth2AuthorizedClientManager(OAuth2AuthorizedClientManager)" --> OAuth2AuthorizationSuccessHandler: onAuthorizationSuccess(OAuth2AuthorizedClient authorizedClient, Authentication principal, Map<String, Object> attributes)
+OAuth2AuthorizationSuccessHandler --> "HttpSessionOAuth2AuthorizedClientRepository(OAuth2AuthorizedClientRepository)": saveAuthorizedClient(OAuth2AuthorizedClient authorizedClient, Authentication principal, HttpServletRequest request, HttpServletResponse response)
+note over "HttpSessionOAuth2AuthorizedClientRepository(OAuth2AuthorizedClientRepository)": cache Access Token(HttpSession)
+"HttpSessionOAuth2AuthorizedClientRepository(OAuth2AuthorizedClientRepository)" --> OAuth2AuthorizationSuccessHandler: void
+OAuth2AuthorizationSuccessHandler --> "DefaultOAuth2AuthorizedClientManager(OAuth2AuthorizedClientManager)": void
+"DefaultOAuth2AuthorizedClientManager(OAuth2AuthorizedClientManager)" --> YourComponent: OAuth2AuthorizedClient
+@enduml
