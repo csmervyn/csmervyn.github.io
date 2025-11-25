@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spring Boot on 墨客人生</title><link>http://example.org/tags/spring-boot/</link><description>Recent content in Spring Boot on 墨客人生</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 15 Feb 2025 10:10:42 +0700</lastBuildDate><atom:link href="http://example.org/tags/spring-boot/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Spring Boot 中如何使用 OAuth 2.0 Client</title><link>http://example.org/posts/spring-boot/how-to-use-oauth-2-client-in-spring-boot/</link><pubDate>Sat, 15 Feb 2025 10:10:42 +0700</pubDate><guid>http://example.org/posts/spring-boot/how-to-use-oauth-2-client-in-spring-boot/</guid><description>&lt;h1 id="背景">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spring Boot on 墨客人生</title><link>http://example.org/tags/spring-boot/</link><description>Recent content in Spring Boot on 墨客人生</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 15 Feb 2025 10:10:42 +0700</lastBuildDate><atom:link href="http://example.org/tags/spring-boot/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Spring Boot 中如何使用 OAuth 2.0 Client</title><link>http://example.org/posts/spring-boot/how-to-use-oauth-2-client-in-spring-boot/</link><pubDate>Sat, 15 Feb 2025 10:10:42 +0700</pubDate><guid>http://example.org/posts/spring-boot/how-to-use-oauth-2-client-in-spring-boot/</guid><description>&lt;h1 id="背景"&gt;
  背景
- &lt;a class="heading-link" href="#%e8%83%8c%e6%99%af">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
- &lt;span class="sr-only">链接到标题&lt;/span>
- &lt;/a>
-&lt;/h1>
-&lt;p>目前有两个微服务 A 和 B，微服务 A 访问微服务 B 之前需要从授权服务器中获取 Access Token，才能携带 Access Token 访问微服务 B 中的 Restful API，如图 1 所示。微服务 A 使用客户端模式（Client Credentials Grant）的方式，从授权服务器获取 Access Token。目前微服务 A 通过 RestTemplate，从授权服务器获取 Access Token，并通过 Ehcache 来缓存 Access Token。&lt;/p></description></item><item><title>Spring Boot 中如何设置 serializer 的 TimeZone</title><link>http://example.org/posts/how_to_configure_timezone_for_serializer_in_spring_boot/</link><pubDate>Sun, 24 Nov 2024 22:03:04 +0800</pubDate><guid>http://example.org/posts/how_to_configure_timezone_for_serializer_in_spring_boot/</guid><description>&lt;h2 id="1-背景">
+ &lt;a class="heading-link" href="#%e8%83%8c%e6%99%af"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;链接到标题&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;目前有两个微服务 A 和 B，微服务 A 访问微服务 B 之前需要从授权服务器中获取 Access Token，才能携带 Access Token 访问微服务 B 中的 Restful API，如图 1 所示。微服务 A 使用客户端模式（Client Credentials Grant）的方式，从授权服务器获取 Access Token。目前微服务 A 通过 RestTemplate，从授权服务器获取 Access Token，并通过 Ehcache 来缓存 Access Token。&lt;/p&gt;</description></item><item><title>Spring Boot 中如何设置 serializer 的 TimeZone</title><link>http://example.org/posts/how_to_configure_timezone_for_serializer_in_spring_boot/</link><pubDate>Sun, 24 Nov 2024 22:03:04 +0800</pubDate><guid>http://example.org/posts/how_to_configure_timezone_for_serializer_in_spring_boot/</guid><description>&lt;h2 id="1-背景"&gt;
  1 背景
- &lt;a class="heading-link" href="#1-%e8%83%8c%e6%99%af">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题">&lt;/i>
- &lt;span class="sr-only">链接到标题&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;p>在一个基于 Spring Boot 的服务中，对外提供一个 Restful 接口 A。该接口的返回值类型中包含一个 ZonedDateTime 类型的字段 createdDateTime。Prod 代码侧期望返回时区为 Australia/Sydney（UTC+10/UTC+10）的时间，并带有时区信息，例如，2024-11-03T08:23:24+11:00。并且测试侧代码也是按照期望进行了测试，测试在 Pipeline 和澳洲 Dev 的本地电脑中可以通过。测试示例如代码1所示。但是该代码确不能在中国 Dev 的本地电脑上工作。&lt;/p></description></item></channel></rss>
+ &lt;a class="heading-link" href="#1-%e8%83%8c%e6%99%af"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;链接到标题&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;在一个基于 Spring Boot 的服务中，对外提供一个 Restful 接口 A。该接口的返回值类型中包含一个 ZonedDateTime 类型的字段 createdDateTime。Prod 代码侧期望返回时区为 Australia/Sydney（UTC+10/UTC+10）的时间，并带有时区信息，例如，2024-11-03T08:23:24+11:00。并且测试侧代码也是按照期望进行了测试，测试在 Pipeline 和澳洲 Dev 的本地电脑中可以通过。测试示例如代码1所示。但是该代码确不能在中国 Dev 的本地电脑上工作。&lt;/p&gt;</description></item></channel></rss>
