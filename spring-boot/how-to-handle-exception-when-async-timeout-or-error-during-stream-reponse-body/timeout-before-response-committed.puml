@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Client -> "Tomcat container": reqeust
+"Tomcat container" -> "Tomcat Worker thread 3": request
+activate "Tomcat Worker thread 3"
+"Tomcat Worker thread 3" -> "Async operation thread": start async
+activate "Async operation thread"
+"Tomcat Worker thread 3" -->]: finish and back to tomcat thread pool
+deactivate "Tomcat Worker thread 3"
+note over "Async operation thread": haven't sent response, but Async timeout
+"Async operation thread"-->]: timeout and back to async thread pool
+deactivate "Async operation thread"
+"Tomcat container" -> "Tomcat Worker thread 5": trigger by timeout
+activate "Tomcat Worker thread 5"
+note over "Tomcat Worker thread 5": Response not committed, we can handle exception and set response
+"Tomcat Worker thread 5" --> Client: reponse with 500 error code
+"Tomcat Worker thread 5" -->]: finish and back to thread pool
+deactivate "Tomcat Worker thread 5"
+@enduml

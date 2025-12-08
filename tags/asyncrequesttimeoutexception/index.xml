@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AsyncRequestTimeoutException on 墨客人生</title><link>http://example.org/tags/asyncrequesttimeoutexception/</link><description>Recent content in AsyncRequestTimeoutException on 墨客人生</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 08 Dec 2025 15:57:42 +0700</lastBuildDate><atom:link href="http://example.org/tags/asyncrequesttimeoutexception/index.xml" rel="self" type="application/rss+xml"/><item><title>StreamingResponseBody 异步异常处理实践</title><link>http://example.org/posts/spring-boot/how-to-handle-exception-when-async-timeout-or-error-during-stream-reponse-body/</link><pubDate>Mon, 08 Dec 2025 15:57:42 +0700</pubDate><guid>http://example.org/posts/spring-boot/how-to-handle-exception-when-async-timeout-or-error-during-stream-reponse-body/</guid><description>&lt;h2 id="分块传输"&gt;
+ 分块传输
+ &lt;a class="heading-link" href="#%e5%88%86%e5%9d%97%e4%bc%a0%e8%be%93"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="链接到标题"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;链接到标题&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Transfer-Encoding 是一个在 HTTP/1.1 被添加进来的 HTTP 的首部。其值可以是 chunked、compress、gzip、deflate。其中值为 chunked 时表示采用分块传输，意思是报文里的 body 部分不是一次性发过来的，而是分成了许多的块（chunk）逐个发送。其模式是一次请求，一次响应，并在连接不断开的情况下，分多次把多个 chunk 发回请求方，如图1 所示。&lt;/p&gt;</description></item></channel></rss>

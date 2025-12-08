@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Client -> "Tomcat container": reqeust
+"Tomcat container" -> "Tomcat Worker thread 9": request
+activate "Tomcat Worker thread 9"
+"Tomcat Worker thread 9" -> "Async operation thread": start async
+activate "Async operation thread"
+"Tomcat Worker thread 9" -->]: finish and back to tomcat thread pool
+deactivate "Tomcat Worker thread 9"
+"Async operation thread" --> Client: send chunked data with 200 status code(Response submitted)
+note over "Async operation thread": keep connection open
+"Async operation thread" --> Client: send chunked data within one response
+note over "Async operation thread": Async timeout
+"Async operation thread"-->]: timeout and back to async thread pool
+deactivate "Async operation thread"
+"Tomcat container" -> "Tomcat Worker thread 10": trigger by timeout
+activate "Tomcat Worker thread 10"
+note over "Tomcat Worker thread 10": want to handle excetpion but response committed, can't modify response
+"Tomcat Worker thread 10" -->]: finish and back to thread pool
+deactivate "Tomcat Worker thread 10"
+@enduml
